@@ -1,18 +1,24 @@
-<h1>Component works!</h1>
 
-<ul>
-  <li>
-    <a [routerLink]="['/about-me']"> About me </a>
-  </li>
-  <li>
-    <a [routerLink]="['/projects']"> Projects </a>
-  </li>
-  <li>
-    <a [routerLink]="['/create']"> Crear proyecto </a>
-  </li>
-  <li>
-    <a [routerLink]="['/contact']"> Contactos </a>
-  </li>
-</ul>
+<header>
+  <ul>
+    
+    <li>
+      <a [routerLink]="['/projects']" [routerLinkActive]="['active']" > Usuarios </a>
+    </li>
+    <li id="logo"> <a href="#"> H  E </a></li>
+    
+    <li>
+      <a [routerLink]="['/contact']" [routerLinkActive]="['active']" > Productos </a>
+    </li>
+  </ul>
+</header>
 
-<router-outlet></router-outlet>
+<section id="content">
+  <router-outlet></router-outlet>
+</section>
+
+<footer>
+  Master en javascript
+</footer>
+
+

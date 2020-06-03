@@ -1,0 +1,11 @@
+.container{
+    padding: 50px;
+    padding-top: 10px;
+}
+
+.container h2{
+    display: block;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}

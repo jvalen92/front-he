@@ -1,1 +1,23 @@
-<p>contact works!</p>
+<div class="container">
+    <h2>Productos</h2>
+    <ul id="hoteles">
+        <li class="elemento" *ngFor="let hotel of  hoteles" >
+            <img src="../../../assets/images/hotel.png">
+            <p>Hotel: {{ hotel.hotel}} </p>
+            <p>Habitacion: {{hotel.name}} </p>
+            <p>Precio: {{hotel.price}}</p>
+        </li>
+    </ul>
+
+    <ul id="museos">
+        <li class="elemento" *ngFor="let museo of  museos" >
+            <img src="../../../assets/images/museum.png">
+            <p>Museo: {{ museo.nombre}} </p>
+            <p>Barrio: {{museo.barrio}} </p>
+            <p>Precio: {{museo.precio}}</p>
+            <a [routerLink]="['/contact']" [routerLinkActive]="['active']">
+                <button (click)="onComprar()"> Comprar </button>
+            </a>
+        </li>
+    </ul>
+</div>

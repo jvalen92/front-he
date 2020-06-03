@@ -1,0 +1,43 @@
+.container{
+    padding: 50px;
+    padding-top: 10px;
+    
+
+}
+
+.container h2{
+    display: block;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.elemento{
+    list-style: none;
+    display: block;
+    float: left;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 30%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+a{
+    text-decoration: none;
+}
+button{
+    background: rgba(53,103,164,0.8);
+    display: block;
+    font-size: 17px;
+    padding: 5px;
+    margin-top: 15px;
+    color: white;
+    cursor: pointer;
+    margin-left: 90px;
+}
+
+img{
+    height: 50px;
+    width: 50px;
+}
