@@ -26,23 +26,24 @@ export class ContactComponent implements OnInit {
 
   public localUser : User;
 
-
-
   constructor(
     private _projectService: ProjectService
-  ) { }
+  ) {
+  
+   }
 
   ngOnInit(): void {
     this.getMuseos();
     this.getHotel();
     this.getUser();
+    
   }
 
   getMuseos() {
     this._projectService.getMuseos().subscribe(
       response => {
         this.museos = response
-        console.log(this.museos);
+        
 
         //get museos by cluster
         let showMuseos = []
@@ -70,6 +71,7 @@ export class ContactComponent implements OnInit {
         while(true){
           if(this.museos[i].cluster == "2"){
               this.museo_2 = this.museos[i];
+              this.museo_2.cluster='3';
               i=0;
               break;
           }
@@ -95,7 +97,11 @@ export class ContactComponent implements OnInit {
         //console.log(showMuseos);
 
         this.museos = showMuseos;
-        console.log(this.museos[0]);
+        console.log("Museos: ", this.museos);
+        
+        
+
+        //this.getflagMuseos();
         
         
       }
@@ -110,7 +116,7 @@ export class ContactComponent implements OnInit {
     this._projectService.getHotel().subscribe(
       response =>{
         this.hoteles = response;
-        //console.log(this.hoteles);
+        
 
         let showHoteles = [];
         let i = 0;
@@ -158,6 +164,8 @@ export class ContactComponent implements OnInit {
 
         //console.log(showHoteles);
         this.hoteles = showHoteles;
+        console.log("Hoteles ",this.hoteles);
+        
       },
       error =>{
         console.log(<any>error);
@@ -174,5 +182,6 @@ export class ContactComponent implements OnInit {
     this.localUser = JSON.parse(localStorage.getItem('user'))
     console.log("Vengo desde usuarios ",this.localUser);
   }
+
 
 }

@@ -42,6 +42,8 @@ export class ProjectsComponent implements OnInit {
           if (this.users[i].cluster == "0") {
             this.user_0 = this.users[i];
             this.user_0.nombre = "Ricardo";
+            this.user_0.cluster_Alojamiento = '2';
+            
             i=0;
             break;
           }
@@ -52,6 +54,7 @@ export class ProjectsComponent implements OnInit {
           if (this.users[i].cluster == "1") {
             this.user_1 = this.users[i];
             this.user_1.nombre = "Santiago";
+            
             i=0;
             break;
           }
@@ -62,6 +65,8 @@ export class ProjectsComponent implements OnInit {
           if (this.users[i].cluster == "2") {
             this.user_2 = this.users[i];
             this.user_2.nombre = "Sebastian";
+            this.user_2.cluster_Museo = '2';
+            
             i=0;
             break;
           }
@@ -76,23 +81,16 @@ export class ProjectsComponent implements OnInit {
 
         this.users = aux
         console.log(this.users);
-
-        //localStorage.setItem('user',);
-        
-        
-        
-        
+  
     },error=>{
       console.log(<any>error);
-      
     })
   }
 
   onRecomend(user){
     console.log(user);
     let userToJson = JSON.stringify(user);
-    localStorage.setItem('user',userToJson);
-    
+    localStorage.setItem('user',userToJson);    
   }
 
 }

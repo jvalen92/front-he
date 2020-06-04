@@ -23,4 +23,8 @@ export class Alojamiento {
         this.calificacion = "";
         this.cluster = "";
     }
+
+    getbool(): boolean{
+        return true;
+    }
 }
